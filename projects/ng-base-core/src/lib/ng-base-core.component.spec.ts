@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { NgBaseCoreComponent } from './ng-base-core.component';
 
 describe('NgBaseCoreComponent', () => {
@@ -8,9 +7,8 @@ describe('NgBaseCoreComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgBaseCoreComponent ]
-    })
-    .compileComponents();
+      declarations: [NgBaseCoreComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

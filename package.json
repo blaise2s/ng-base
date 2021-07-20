@@ -66,5 +66,23 @@
     "*.{ts}": "eslint --cache --fix",
     "*.{scss}": "stylelint --fix",
     "*.{ts,html,scss,json,md}": "prettier --write"
+  },
+  "vsc-organize-imports": {
+    "orderSpecifiers": true,
+    "orderSpecifiersAsSingleLine": true,
+    "baseUrl": "src",
+    "emptyLinesAfterImports": 1,
+    "emptyLinesBetweenFilledGroups": 1,
+    "groups": [
+      {
+        "groups": [
+          "globalDirect",
+          "absoluteDirect",
+          "relativeDirect"
+        ],
+        "sortBy": "path",
+        "emptyLines": true
+      }
+    ]
   }
 }

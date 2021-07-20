@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { NgBaseCoreService } from './ng-base-core.service';
 
 describe('NgBaseCoreService', () => {
