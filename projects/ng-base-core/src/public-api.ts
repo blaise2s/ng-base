@@ -2,6 +2,7 @@
  * Public API Surface of ng-base-core
  */
 
-export * from './lib/ng-base-core.component';
-export * from './lib/ng-base-core.module';
-export * from './lib/ng-base-core.service';
+export { CoreConst } from './lib/consts/core.const';
+export { CoreEnum } from './lib/enums/core.enum';
+export { CoreInterface } from './lib/interfaces/core.interface';
+export { CoreService } from './lib/services/core.service';

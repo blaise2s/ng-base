@@ -2,6 +2,7 @@
 
 import 'zone.js';
 import 'zone.js/testing';
+// zone.js and zone.js/testing must be imported first
 import { getTestBed } from '@angular/core/testing';
 import {
   BrowserDynamicTestingModule,

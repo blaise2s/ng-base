@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test --watch=false --browsers=ChromeHeadless --code-coverage",
     "lint": "ng lint"
   },
   "private": true,
@@ -66,23 +66,5 @@
     "*.{ts}": "eslint --cache --fix",
     "*.{scss}": "stylelint --fix",
     "*.{ts,html,scss,json,md}": "prettier --write"
-  },
-  "vsc-organize-imports": {
-    "orderSpecifiers": true,
-    "orderSpecifiersAsSingleLine": true,
-    "baseUrl": "src",
-    "emptyLinesAfterImports": 1,
-    "emptyLinesBetweenFilledGroups": 1,
-    "groups": [
-      {
-        "groups": [
-          "globalDirect",
-          "absoluteDirect",
-          "relativeDirect"
-        ],
-        "sortBy": "path",
-        "emptyLines": true
-      }
-    ]
   }
 }
