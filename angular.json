@@ -3,6 +3,86 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ng-base-core": {
+      "projectType": "library",
+      "root": "projects/ng-base-core",
+      "sourceRoot": "projects/ng-base-core/src",
+      "prefix": "ngbc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-base-core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-base-core/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-base-core/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-base-core/src/test.ts",
+            "tsConfig": "projects/ng-base-core/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-base-core/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ng-base-core/**/*.ts",
+              "projects/ng-base-core/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "ng-base": {
+      "projectType": "library",
+      "root": "projects/ng-base",
+      "sourceRoot": "projects/ng-base/src",
+      "prefix": "ngb",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-base/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-base/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-base/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-base/src/test.ts",
+            "tsConfig": "projects/ng-base/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-base/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ng-base/**/*.ts",
+              "projects/ng-base/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "ng-base-site": {
       "projectType": "application",
       "schematics": {
@@ -110,46 +190,6 @@
             "lintFilePatterns": [
               "projects/ng-base-site/**/*.ts",
               "projects/ng-base-site/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "ng-base-core": {
-      "projectType": "library",
-      "root": "projects/ng-base-core",
-      "sourceRoot": "projects/ng-base-core/src",
-      "prefix": "ngbc",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/ng-base-core/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/ng-base-core/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/ng-base-core/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ng-base-core/src/test.ts",
-            "tsConfig": "projects/ng-base-core/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-base-core/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "projects/ng-base-core/**/*.ts",
-              "projects/ng-base-core/**/*.html"
             ]
           }
         }

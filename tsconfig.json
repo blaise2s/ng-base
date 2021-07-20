@@ -12,6 +12,10 @@
     "declaration": false,
     "downlevelIteration": true,
     "paths": {
+      "ng-base": [
+        "dist/ng-base/ng-base",
+        "dist/ng-base"
+      ],
       "ng-base-core": [
         "dist/ng-base-core/ng-base-core",
         "dist/ng-base-core"
