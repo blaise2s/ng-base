@@ -103,9 +103,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ng-base-site/**/*.ts",
+              "projects/ng-base-site/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "ng-base-site"
+  "defaultProject": "ng-base-site",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
