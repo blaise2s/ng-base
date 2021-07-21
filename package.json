@@ -7,7 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch=false --browsers=ChromeHeadless --code-coverage",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "e2e": "yarn cypress:run",
+    "cypress:open": "ng run ng-base-site:cypress-open",
+    "cypress:run": "ng run ng-base-site:cypress-run"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +37,7 @@
     "@angular/compiler-cli": "~12.1.2",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@cypress/schematic": "1.5.0",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "4.28.2",
@@ -53,7 +57,8 @@
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-prettier": "^1.2.0",
-    "typescript": "~4.3.2"
+    "typescript": "~4.3.2",
+    "cypress": "8.0.0"
   },
   "config": {
     "commitizen": {

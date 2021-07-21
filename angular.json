@@ -110,9 +110,7 @@
               "projects/ng-base-site/src/favicon.ico",
               "projects/ng-base-site/src/assets"
             ],
-            "styles": [
-              "projects/ng-base-site/src/styles.scss"
-            ],
+            "styles": ["projects/ng-base-site/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -178,9 +176,7 @@
               "projects/ng-base-site/src/favicon.ico",
               "projects/ng-base-site/src/assets"
             ],
-            "styles": [
-              "projects/ng-base-site/src/styles.scss"
-            ],
+            "styles": ["projects/ng-base-site/src/styles.scss"],
             "scripts": []
           }
         },
@@ -191,6 +187,39 @@
               "projects/ng-base-site/**/*.ts",
               "projects/ng-base-site/**/*.html"
             ]
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "ng-base-site:serve",
+            "configFile": "projects/ng-base-site/cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ng-base-site:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/ng-base-site/cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "ng-base-site:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ng-base-site:serve:production"
+            }
           }
         }
       }
